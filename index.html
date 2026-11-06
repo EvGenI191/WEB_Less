@@ -22,7 +22,13 @@
         <div class="container">
 
             <a href="#" class="logo">WebStudio</a>
-
+            <button class="menu-toggle"
+                type="button"
+                aria-label="Открыть меню"
+                aria-expanded="false"
+                aria-controls="main-navigation">
+                ☰
+            </button>
             <nav class="navigation" aria-label="Основное">
                 <a href="#home">Главная</a>
                 <a href="#services">Услуги</a>
@@ -69,6 +75,7 @@
 
                     <article class="service-card">
                         <h3 class="service-text">Разработка сайтов</h3>
+                        <p id="services-counter"></p>
                         <p class="service-description">Сайты с нуля — от лендинга до корпоративного портала.
                             Разбираемся в задаче, продумываем структуру и запускаем сайт, который удобно открывать с телефона и легко обновлять.</p>
                         <a href="#contacts" class="service-link">Подробнее</a>
@@ -76,6 +83,7 @@
 
                     <article class="service-card">
                         <h3 class="service-text">Интернет-магазины</h3>
+                        <p id="services-counter"></p>
                         <p class="service-description">Магазины, в которых легко выбирать товары и удобно оформлять заказ.
                             Настраиваем каталог, оплату, доставку и аналитику — чтобы вы видели, что происходит с продажами.</p>
                         <a href="#contacts" class="service-link">Подробнее</a>
@@ -83,6 +91,7 @@
 
                     <article class="service-card">
                         <h3 class="service-text">Веб-приложения</h3>
+                        <p id="services-counter"></p>
                         <p class="service-description">Личные кабинеты, сервисы и внутренние инструменты для задач, которым тесно в рамках обычного сайта.
                             Продумываем логику и интерфейс так, чтобы приложением было удобно пользоваться каждый день.</p>
                         <a href="#contacts" class="service-link">Подробнее</a>
@@ -90,6 +99,7 @@
 
                     <article class="service-card">
                         <h3 class="service-text">Поддержка сайтов</h3>
+                        <p id="services-counter"></p>
                         <p class="service-description">Обновляем содержимое, следим за работоспособностью и вносим доработки в уже работающие сайты.
                             Отвечаем человеческим языком и не пропадаем — сайт остаётся живым, а у вас не болит голова за техническую часть.</p>
                         <a href="#contacts" class="service-link">Подробнее</a>
@@ -138,7 +148,7 @@
 
                 <h2>Оставьте заявку</h2>
 
-                <form action="send.php" method="POST">
+                <form id="contact-form" action="send.php" method="POST">
                     <label for="name">Ваше имя</label>
 
                     <input
@@ -169,7 +179,7 @@
                     ></textarea>
                     
                     <button type="submit">Отправить</button>
-
+                    <p id="form-message" aria-live="polite"></p>
                 </form>
 
             </div>
@@ -192,6 +202,8 @@
 
     </footer>
 
+    <button id="scroll-top" type="button">Наверх ↑</button>
+    <script src="js/script.js"></script>
 </body>
 
 </html>
